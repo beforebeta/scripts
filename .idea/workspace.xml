@@ -10,7 +10,7 @@
     <file path="/models.py" changelist="270bbb49-4907-4f67-b437-01ba327e9ab6" time="1378489825288" ignored="false" />
     <file path="/bufferapp.py" changelist="270bbb49-4907-4f67-b437-01ba327e9ab6" time="1378491977572" ignored="false" />
     <file path="/requirements.txt" changelist="270bbb49-4907-4f67-b437-01ba327e9ab6" time="1379166263513" ignored="false" />
-    <file path="/loader.py" changelist="270bbb49-4907-4f67-b437-01ba327e9ab6" time="1379167544634" ignored="false" />
+    <file path="/loader.py" changelist="270bbb49-4907-4f67-b437-01ba327e9ab6" time="1379167580577" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +33,7 @@
       <file leaf-file-name="loader.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/crunchbase/main/management/commands/loader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="0" selection-start="1133" selection-end="1133" vertical-scroll-proportion="0.6801909">
+            <state line="40" column="66" selection-start="1134" selection-end="1134" vertical-scroll-proportion="0.66229117">
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -378,7 +378,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/crunchbase/main/management/commands/loader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="0" selection-start="1133" selection-end="1133" vertical-scroll-proportion="0.6801909">
+        <state line="40" column="66" selection-start="1134" selection-end="1134" vertical-scroll-proportion="0.66229117">
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
