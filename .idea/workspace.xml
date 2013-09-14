@@ -28,10 +28,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="requirements.txt" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/crunchbase/crunchbase/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="14" selection-start="127" selection-end="127" vertical-scroll-proportion="0.11986301">
+            <state line="122" column="10" selection-start="4431" selection-end="4431" vertical-scroll-proportion="0.53699285">
               <folding />
             </state>
           </provider>
@@ -51,6 +51,7 @@
         <option value="$PROJECT_DIR$/bufferapp.py" />
         <option value="$PROJECT_DIR$/setup.sh" />
         <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/crunchbase/crunchbase/settings.py" />
       </list>
     </option>
   </component>
@@ -294,13 +295,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crunchbase/crunchbase/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="807" selection-end="807" vertical-scroll-proportion="0.382387">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/setup.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="25" selection-start="637" selection-end="637" vertical-scroll-proportion="0.29109588">
@@ -311,6 +305,13 @@
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="14" selection-start="127" selection-end="127" vertical-scroll-proportion="0.11986301">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crunchbase/crunchbase/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="122" column="10" selection-start="4431" selection-end="4431" vertical-scroll-proportion="0.53699285">
           <folding />
         </state>
       </provider>
