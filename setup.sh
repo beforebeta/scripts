@@ -16,3 +16,5 @@ sudo mkswap /swapfile
 sudo swapon /swapfile
 sudo chown root:root /swapfile
 sudo chmod 0600 /swapfile
+easy_install -U distribute
+easy_install mysql-python

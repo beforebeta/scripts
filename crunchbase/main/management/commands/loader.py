@@ -8,19 +8,38 @@ from main.models import *
 from time import mktime
 from datetime import datetime
 from django.utils import encoding
+import requests
+
+
 class Command(BaseCommand):
     option_list = BaseCommand.option_list + (
         make_option('--load',
             action='store_true',
             dest='load',
             default=False,
-            help='Load Data'),)
+            help='Load Data'),
+        make_option('--companies',
+            action='store_true',
+            dest='companies',
+            default=False,
+            help='Load Data of Companies'),
+    )
 
     def handle(self, *args, **options):
         err = self.stderr
         out = self.stdout
         if options['load']:
             load_from_file(sys.argv[3])
+        elif options['companies']:
+            load_companies()
+
+def load_companies():
+    companies = open("companies.js","r")
+    companies = json.loads(companies.read())
+    for company in companies:
+        print company
+        _company_js = open("files/%s.js" % company["permalink"])
+        _company_js.write(requests.get("http://api.crunchbase.com/v/1/company/%s.js?api_key=upkjyexdt2v9xxjesus7q2tr" % company["permalink"]).content)
 
 def load_from_file(file_name):
     print "Loading Company Data"
