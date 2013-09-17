@@ -41,8 +41,11 @@ def load_companies():
         try:
             with open("files/%s.js" % company["permalink"],"r"): pass
         except:
-            _company_js = open("files/%s.js" % company["permalink"],"w")
-            _company_js.write(requests.get("http://api.crunchbase.com/v/1/company/%s.js?api_key=upkjyexdt2v9xxjesus7q2tr" % company["permalink"]).content)
+            try:
+                _company_js = open("files/%s.js" % company["permalink"],"w")
+                _company_js.write(requests.get("http://api.crunchbase.com/v/1/company/%s.js?api_key=upkjyexdt2v9xxjesus7q2tr" % company["permalink"]).content)
+            except:
+                print_stack_trace()
 
 def load_from_file(file_name):
     print "Loading Company Data"

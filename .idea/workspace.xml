@@ -5,12 +5,12 @@
     <ignored path="scripts.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/skimlinks_merchants_parser.py" changelist="270bbb49-4907-4f67-b437-01ba327e9ab6" time="1378488971311" ignored="false" />
-    <file path="/Dummy.txt" changelist="270bbb49-4907-4f67-b437-01ba327e9ab6" time="1379165000949" ignored="false" />
+    <file path="/Dummy.txt" changelist="270bbb49-4907-4f67-b437-01ba327e9ab6" time="1379449193501" ignored="false" />
     <file path="$PROJECT_DIR$/../coupons/core/models.py" changelist="270bbb49-4907-4f67-b437-01ba327e9ab6" time="1378490889349" ignored="false" />
     <file path="/models.py" changelist="270bbb49-4907-4f67-b437-01ba327e9ab6" time="1378489825288" ignored="false" />
     <file path="/bufferapp.py" changelist="270bbb49-4907-4f67-b437-01ba327e9ab6" time="1378491977572" ignored="false" />
     <file path="/requirements.txt" changelist="270bbb49-4907-4f67-b437-01ba327e9ab6" time="1379166263513" ignored="false" />
-    <file path="/loader.py" changelist="270bbb49-4907-4f67-b437-01ba327e9ab6" time="1379440811829" ignored="false" />
+    <file path="/loader.py" changelist="270bbb49-4907-4f67-b437-01ba327e9ab6" time="1379455939289" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +33,7 @@
       <file leaf-file-name="loader.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/crunchbase/main/management/commands/loader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="0" selection-start="1240" selection-end="1240" vertical-scroll-proportion="0.6085919">
+            <state line="27" column="39" selection-start="722" selection-end="722" vertical-scroll-proportion="0.34009546">
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -385,9 +385,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/crunchbase/main/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="16" selection-start="122" selection-end="122" vertical-scroll-proportion="0.08813161">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/crunchbase/main/management/commands/loader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="0" selection-start="1240" selection-end="1240" vertical-scroll-proportion="0.6085919">
+        <state line="27" column="39" selection-start="722" selection-end="722" vertical-scroll-proportion="0.34009546">
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
