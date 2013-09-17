@@ -10,7 +10,7 @@
     <file path="/models.py" changelist="270bbb49-4907-4f67-b437-01ba327e9ab6" time="1378489825288" ignored="false" />
     <file path="/bufferapp.py" changelist="270bbb49-4907-4f67-b437-01ba327e9ab6" time="1378491977572" ignored="false" />
     <file path="/requirements.txt" changelist="270bbb49-4907-4f67-b437-01ba327e9ab6" time="1379166263513" ignored="false" />
-    <file path="/loader.py" changelist="270bbb49-4907-4f67-b437-01ba327e9ab6" time="1379167580577" ignored="false" />
+    <file path="/loader.py" changelist="270bbb49-4907-4f67-b437-01ba327e9ab6" time="1379440811829" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +33,7 @@
       <file leaf-file-name="loader.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/crunchbase/main/management/commands/loader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="66" selection-start="1134" selection-end="1134" vertical-scroll-proportion="0.66229117">
+            <state line="44" column="0" selection-start="1240" selection-end="1240" vertical-scroll-proportion="0.6085919">
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -62,7 +62,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
-    <option name="width" value="1390" />
+    <option name="width" value="1120" />
     <option name="height" value="1024" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -91,7 +91,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -192,14 +191,15 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="preferences.sourceCode" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -239,14 +239,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1390" height="1024" extended-state="0" />
+    <frame x="0" y="22" width="1120" height="1024" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26860118" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34171322" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -322,6 +322,15 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/crunchbase/main/management/commands/loader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bufferapp.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="160" column="28" selection-start="4578" selection-end="4578" vertical-scroll-proportion="0.4611819" />
@@ -336,7 +345,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="69" selection-start="905" selection-end="905" vertical-scroll-proportion="-1.7183771">
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#35#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -378,7 +387,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/crunchbase/main/management/commands/loader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="66" selection-start="1134" selection-end="1134" vertical-scroll-proportion="0.66229117">
+        <state line="44" column="0" selection-start="1240" selection-end="1240" vertical-scroll-proportion="0.6085919">
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>

@@ -38,8 +38,11 @@ def load_companies():
     companies = json.loads(companies.read())
     for company in companies:
         print company
-        _company_js = open("files/%s.js" % company["permalink"],"w")
-        _company_js.write(requests.get("http://api.crunchbase.com/v/1/company/%s.js?api_key=upkjyexdt2v9xxjesus7q2tr" % company["permalink"]).content)
+        try:
+            with open("files/%s.js" % company["permalink"],"r"): pass
+        except:
+            _company_js = open("files/%s.js" % company["permalink"],"w")
+            _company_js.write(requests.get("http://api.crunchbase.com/v/1/company/%s.js?api_key=upkjyexdt2v9xxjesus7q2tr" % company["permalink"]).content)
 
 def load_from_file(file_name):
     print "Loading Company Data"
