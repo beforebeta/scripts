@@ -51,10 +51,10 @@ def load_from_file(file_name):
     print "Loading Company Data"
     company_profiles = json.loads(open(file_name,"r").read())
     index = 0
-    num = len(company_profiles.values())
-    for company in company_profiles.values():
+    num = len(company_profiles)
+    for company in company_profiles:
         print "%s/%s" % (index, num)
-        load_company_profile(company)
+        load_company_profile(json.loads(open("files/%s.js" % company["permalink"],"r").read()))
         index += 1
 
 def _get_dt(time_string):
