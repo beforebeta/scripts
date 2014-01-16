@@ -11,7 +11,7 @@ sudo apt-get install python-dev
 sudo apt-get install libmysqlclient-dev
 pip install mysql-python
 pip install requests
-sudo dd if=/dev/zero of=/swapfile bs=1024 count=1024k
+sudo dd if=/dev/zero of=/swapfile bs=1024 count=2048k
 sudo mkswap /swapfile
 sudo swapon /swapfile
 sudo chown root:root /swapfile
