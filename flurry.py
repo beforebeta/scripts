@@ -48,9 +48,9 @@ def get_conv_rate(deal_stats, index):
     except:
         return 0.0
 
-today = datetime.date.today()
-yesterday = today + relativedelta(days=-1)
-day_before = yesterday + relativedelta(days=-1)
+today = datetime.date.today() + relativedelta(days=-1)
+yesterday = today + relativedelta(days=-2)
+day_before = yesterday + relativedelta(days=-3)
 
 new_users = json.loads(get_new_users(day_before, today))
 msg = "Subject:PushPenny Mobile App Stats\n\nPushPenny Mobile App Stats\n"
