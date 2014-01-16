@@ -30,8 +30,8 @@ def send_email(msg):
     _user="beforebetabot@gmail.com"
     _password='123dfvlabs'
     fromaddr = _user
-    #toaddrs  = ['janto@digitalfirstventures.com','amrish@digitalfirstventures.com','amrish.singh@gmail.com', 'thomas.whyyou@ymail.com', 'elodieblakely@gmail.com']
-    toaddrs  = ['amrish@digitalfirstventures.com','amrish.singh@gmail.com']
+    toaddrs  = ['janto@digitalfirstventures.com','amrish@digitalfirstventures.com','amrish.singh@gmail.com', 'thomas.whyyou@ymail.com', 'elodieblakely@gmail.com']
+    #toaddrs  = ['amrish@digitalfirstventures.com','amrish.singh@gmail.com']
     username = _user
     password = _password
 
