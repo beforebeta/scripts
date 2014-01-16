@@ -42,6 +42,12 @@ def send_email(msg):
     server.sendmail(fromaddr, toaddrs, msg)
     server.quit()
 
+def get_conv_rate(deal_stats, index):
+    try:
+        return float(deal_stats["day"][index]["@totalCount"])/float(deal_stats["day"][index]["@totalSessions"])
+    except:
+        return 0.0
+
 today = datetime.date.today()
 yesterday = today + relativedelta(days=-1)
 day_before = yesterday + relativedelta(days=-1)
@@ -69,8 +75,8 @@ msg += "%s: %s\n" % (active_users["day"][-3]["@date"],active_users["day"][-3]["@
 get_deal_stats = json.loads(get_event_info('Action_GetDeal', day_before, today))
 msg += "\n\nGet Deal Events\n"
 msg += "---------------\n"
-msg += "%s: Total=%s, Conversion Rate=%.2f\n" % (get_deal_stats["day"][-1]["@date"], get_deal_stats["day"][-1]["@totalCount"], float(get_deal_stats["day"][-1]["@totalCount"])/float(get_deal_stats["day"][-1]["@totalSessions"]))
-msg += "%s: Total=%s, Conversion Rate=%.2f\n" % (get_deal_stats["day"][-2]["@date"], get_deal_stats["day"][-2]["@totalCount"], float(get_deal_stats["day"][-2]["@totalCount"])/float(get_deal_stats["day"][-2]["@totalSessions"]))
-msg += "%s: Total=%s, Conversion Rate=%.2f\n" % (get_deal_stats["day"][-3]["@date"], get_deal_stats["day"][-3]["@totalCount"], float(get_deal_stats["day"][-3]["@totalCount"])/float(get_deal_stats["day"][-3]["@totalSessions"]))
+msg += "%s: Total=%s, Conversion Rate=%.2f\n" % (get_deal_stats["day"][-1]["@date"], get_deal_stats["day"][-1]["@totalCount"], get_conv_rate(get_deal_stats, -1))
+msg += "%s: Total=%s, Conversion Rate=%.2f\n" % (get_deal_stats["day"][-2]["@date"], get_deal_stats["day"][-2]["@totalCount"], get_conv_rate(get_deal_stats, -2))
+msg += "%s: Total=%s, Conversion Rate=%.2f\n" % (get_deal_stats["day"][-3]["@date"], get_deal_stats["day"][-3]["@totalCount"], get_conv_rate(get_deal_stats, -3))
 
 send_email(msg)
