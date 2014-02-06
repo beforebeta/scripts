@@ -1,4 +1,5 @@
 import sys, traceback
+import datetime
 import requests
 import threading
 
@@ -10,7 +11,7 @@ def print_stack_trace():
     print '-'*60
 
 f = open("urls_to_test.lines", "r")
-results = open("results.csv","w")
+results = open("results%s.csv" % str(datetime.datetime.now().strftime("%d_%m_%Y_%H_%M_%S")),"w")
 
 links = [line.strip() for line in f.readlines()]
 
