@@ -229,7 +229,7 @@ def send_email(msg):
     _password='123dfvlabs'
     fromaddr = _user
     # toaddrs  = ['janto@digitalfirstventures.com','amrish@digitalfirstventures.com','amrish.singh@gmail.com', 'thomas.whyyou@ymail.com', 'elodieblakely@gmail.com']
-    toaddrs  = ['thomas.whyyou@outlook.com']
+    toaddrs  = ['thomas.whyyou@outlook.com', 'amrish@digitalfirstventures.com']
     username = _user
     password = _password
 
