@@ -1,3 +1,4 @@
+import math
 import requests
 import smtplib
 from collections import OrderedDict, Counter
@@ -69,15 +70,17 @@ request_parameters = {
         'radius': 100,
     }
 
-def test_mobile_api_in_service(msg):
+def test_mobile_api_in_service():
+    result_msg = str()
     api_response = fetch_api_response(request_parameters)
     if api_response.status_code == 200:
-        msg += "> Responding :)\n\n"
+        result_msg += "> Responding :)\n\n\n"
     else:
-        msg += "> NOT responding! :(\n\n"
-    return msg
+        result_msg += "> NOT responding! :(\n\n\n"
+    return result_msg
 
-def test_enough_local_deals_available(msg):
+def test_enough_local_deals_available():
+    result_msg = str()
     fail_count = 0
     fail_log = str()
     for name, lat_lng in top_50_us_cities_dict.iteritems():
@@ -90,26 +93,57 @@ def test_enough_local_deals_available(msg):
             fail_log += "{} ({}): {} deals\n".format(name, lat_lng, num_of_deals)
             fail_count += 1
     if fail_count:
-        msg += "> Following {} out of 50 cities failed :(\n"
-        msg += fail_log
-        msg += '\n'
+        result_msg += "> Following {} out of 50 cities failed :(\n\n".format(fail_count)
+        result_msg += fail_log
+        result_msg += '\n'
     else:
-        msg += "> All passed :)\n\n"
-    return msg
+        result_msg += "> All passed :)\n\n\n"
+    return result_msg
 
-def test_consec_dup_deals_minimized(msg):
-    # Check only the first page in each city.
+def test_consec_dup_deals_minimized():
+    result_msg = str()
+    fail_count = 0
+    fail_log = str()
+
+    list_of_deals = []
     for name, lat_lng in top_50_us_cities_dict.iteritems():
-        request_parameters['location'] = lat_lng
-        api_response = fetch_api_response(request_parameters)
-        yield check_consec_dups_within_threshold, api_response, MAX_CONSEC_DUPS, name
+        list_of_deals = get_all_deals(lat_lng)
+        violations = check_consec_dups_within_threshold(list_of_deals, MAX_CONSEC_DUPS, name)
+        if violations:
+            fail_log += "{} ({})\n".format(name, lat_lng)
+            fail_log += "{} violations; UNTOLERATED duplicates:\n".format(len(violations))
+            fail_log += "{}\n\n".format(violations)
+            fail_count += 1
+
+    if fail_count:
+        result_msg += "> Following {} out of 50 cities failed :(\n\n".format(fail_count)
+        result_msg += fail_log
+        result_msg += '\n'
+    else:
+        result_msg += "> All passed :)\n\n\n"
+    return result_msg
 
 def test_total_dup_deals_minimized():
-    # Check only the first page in each city.
+    result_msg = str()
+    fail_count = 0
+    fail_log = str()
+
     for name, lat_lng in top_50_us_cities_dict.iteritems():
-        request_parameters['location'] = lat_lng
-        api_response = fetch_api_response(request_parameters)
-        yield check_total_dups_within_threshold, api_response, MAX_TOTAL_DUPS, name
+        list_of_deals = get_all_deals(lat_lng)
+        violations = check_total_dups_within_threshold(list_of_deals, MAX_TOTAL_DUPS, name)
+        if violations:
+            fail_log += "{} ({})\n".format(name, lat_lng)
+            fail_log += "{} violations; ALL duplicates:\n".format(len(violations))
+            fail_log += "{}\n\n".format(violations)
+            fail_count += 1
+
+    if fail_count:
+        result_msg += "> Following {} out of 50 cities failed :(\n\n".format(fail_count)
+        result_msg += fail_log
+        result_msg += '\n'
+    else:
+        result_msg += "> All passed :)\n\n\n"
+    return result_msg
 
 ##################################################################################################
 # Helper Methods
@@ -118,34 +152,70 @@ def test_total_dup_deals_minimized():
 def fetch_api_response(request_parameters):
     return requests.get(PUSHPENNY_API_URL + 'deals', params=request_parameters)
 
+def get_all_deals(lat_lng):
+    list_of_deals = []
+    request_parameters['location'] = lat_lng
+    api_response = fetch_api_response(request_parameters)
+    list_of_deals += [each['deal'] for each in api_response.json()['deals']]
+    total_num_of_deals = api_response.json()['query']['total']
+    page_count = int(math.ceil(total_num_of_deals / float(request_parameters['per_page'])))
+    for i in range(page_count)[1:]:
+        request_parameters['page'] = i + 1
+        subsequent_responses = fetch_api_response(request_parameters)
+        list_of_deals += [each['deal'] for each in subsequent_responses.json()['deals']]
+    return list_of_deals
+
 def check_deals_quantity_above_threshold(api_response, minimum_threshold, reference_string=None):
     num_of_total_available = api_response.json()['query']['total']
     return (num_of_total_available >= minimum_threshold, num_of_total_available)
 
-def check_consec_dups_within_threshold(api_response, maximum_threshold, reference_string=None):
-    short_titles = [each['deal']['short_title'] for each in api_response.json()['deals']]
+def check_consec_dups_within_threshold(list_of_deals, maximum_threshold, reference_string=None):
+    violation_groups = []
+    ref_id_list = []
     allowed_consec_dups = (maximum_threshold - 1)
 
     consec_dups_detected = 0
-    previous_deal_title = None
-    for s in short_titles:
-        if not previous_deal_title:
-            previous_deal_title = s
+    previous_deal = None
+    for deal in list_of_deals:
+        if not previous_deal:
+            previous_deal = deal
             continue
-        if s == previous_deal_title:
+
+        if deal['short_title'] == previous_deal['short_title']:
             consec_dups_detected += 1
-            previous_deal_title = s
             if consec_dups_detected > allowed_consec_dups:
-                break
+                ref_id_list.append(deal['id'])
+            previous_deal = deal
         else:
             consec_dups_detected = 0
-            previous_deal_title = s
-    assert consec_dups_detected <= allowed_consec_dups
+            if ref_id_list:
+                violation_groups.append(ref_id_list)
+            previous_deal = deal
+            ref_id_list = []
+    return violation_groups
 
-def check_total_dups_within_threshold(api_response, maximum_threshold, reference_string=None):
-    short_titles = [each['deal']['short_title'] for each in api_response.json()['deals']]
-    dup_deals_above_threshold = [k + " ->" + str(v) for k, v in Counter(short_titles).items() if v > maximum_threshold]
-    assert len(dup_deals_above_threshold) == 0
+def check_total_dups_within_threshold(list_of_deals, maximum_threshold, reference_string=None):
+    violation_groups = []
+
+    num_of_deals  = len(list_of_deals)
+    num_per_check = MIN_DEAL_QUANTITY * 2
+    total_iter    = int(math.ceil(num_of_deals / num_per_check))
+    current_iter  = 1
+
+    while True:
+        if current_iter > total_iter:
+            break
+
+        start_deal   = (current_iter - 1) * num_per_check
+        end_deal     = current_iter * num_per_check
+        list_segment = list_of_deals[start_deal:end_deal]
+        short_titles = [each['short_title'] for each in list_segment]
+        dup_deals = [k for k, v in Counter(short_titles).items() if v > maximum_threshold]
+        if dup_deals:
+            ref_id_list = [deal['id'] for deal in list_segment if deal['short_title'] in dup_deals]
+            violation_groups.append(ref_id_list)
+        current_iter += 1
+    return violation_groups
 
 def describe_section(label):
     section =  "-" * 30
@@ -170,18 +240,17 @@ def send_email(msg):
     server.sendmail(fromaddr, toaddrs, msg)
     server.quit()
 
-# send_email(msg)
 msg =  "Subject:PushPenny Mobile API Check-ins\n\nPushPenny Mobile API Status\n\n"
 msg += describe_section("MOBILE API SERVICE CHECK")
-msg += test_mobile_api_in_service(msg)
+msg += test_mobile_api_in_service()
 msg += describe_section("DEAL VOLUME CHECK")
 msg += "(Check at least {} deals available in target 50 cities)\n".format(MIN_DEAL_QUANTITY)
-msg += test_enough_local_deals_available(msg)
+msg += test_enough_local_deals_available()
 msg += describe_section("DUPLICATES CHECK - CONSECUTIVE")
-msg += "(Check no more than {} deals appearing back-to-back on 1st page of target 50 cities)\n".format(MAX_CONSEC_DUPS)
-msg += test_consec_dup_deals_minimized(msg)
+msg += "(Check no more than {} deals appearing back-to-back in target 50 cities)\n".format(MAX_CONSEC_DUPS)
+msg += test_consec_dup_deals_minimized()
 msg += describe_section("DUPLICATES CHECK - TOTAL")
-msg += "(Check no more than {} deals appearing in total in target 50 cities)\n".format(MAX_CONSEC_DUPS)
-print msg
-# send_email(msg)
-
+msg += "(Check no more than {} deals appearing in total in target 50 cities)\n".format(MAX_TOTAL_DUPS)
+msg += test_total_dup_deals_minimized()
+# print msg
+send_email(msg)
