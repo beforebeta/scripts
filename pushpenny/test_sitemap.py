@@ -34,6 +34,8 @@ def print_stack_trace():
 
 def test_link_for_301(link):
     try:
+        print link[0]
+        link = link[1]
         r = requests.get(link)
         if r.status_code != 200:
             print r.status_code, link
@@ -45,5 +47,10 @@ def test_link_for_301(link):
 
 if __name__ == "__main__":
     test_urls = test_sitemap()
+    urls = []
+    index = 1
+    for url in test_urls:
+        urls.append(["%s/%s" % (str(index), str(len(test_urls))), url])
+        index += 1
     p = Pool(50)
-    p.map(test_link_for_301, test_urls)
+    p.map(test_link_for_301, urls)
