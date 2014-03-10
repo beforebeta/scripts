@@ -34,8 +34,10 @@ def print_stack_trace():
 
 def test_link_for_301(link):
     try:
-        print link[0]
+        #print link[0]
         link = link[1]
+        link = link.replace("pushpenny.com", "pennywyse.dev.djangostars.com")
+        print link
         r = requests.get(link)
         if r.status_code != 200:
             print r.status_code, link
@@ -52,5 +54,5 @@ if __name__ == "__main__":
     for url in test_urls:
         urls.append(["%s/%s" % (str(index), str(len(test_urls))), url])
         index += 1
-    p = Pool(50)
+    p = Pool(20)
     p.map(test_link_for_301, urls)
