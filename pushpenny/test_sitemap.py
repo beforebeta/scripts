@@ -3,6 +3,8 @@ import sys, traceback
 import requests
 from xml.dom import minidom
 
+NUMBER_OF_PARALLEL_REQUESTS = 10
+
 sitemap_url = "http://pushpenny.com/sitemap.xml"
 
 def getText(nodelist):
@@ -54,5 +56,5 @@ if __name__ == "__main__":
     for url in test_urls:
         urls.append(["%s/%s" % (str(index), str(len(test_urls))), url])
         index += 1
-    p = Pool(10)
+    p = Pool(NUMBER_OF_PARALLEL_REQUESTS)
     p.map(test_link_for_301, urls)
