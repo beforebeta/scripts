@@ -1,6 +1,7 @@
 import datetime
 from BeautifulSoup import BeautifulSoup
 from django.db import models
+from django.db.models import Sum
 from picklefield.fields import PickledObjectField
 from model_utils import Choices
 import hashlib
@@ -57,7 +58,7 @@ class Crawl(models.Model):
         self.stats["total_200_links"] = self.crawledlink_set.filter(status_code=200).count()
         self.stats["total_404_links"] = self.crawledlink_set.filter(status_code=404).count()
         self.stats["total_500_links"] = self.crawledlink_set.filter(status_code=500).count()
-
+        self.stats["avg_response_time"] = self.crawledlink_set.all().aggregate(Sum("elapsed")).values()[0] / self.crawledlink_set.all().count()
         self.stats["response_times"] = []
         #create histogram of response times
         for i in range(13):
@@ -74,7 +75,6 @@ class Crawl(models.Model):
                 "interval": "%s-%s" % (str(i), max_str),
                 "frequency": self.crawledlink_set.filter(elapsed__gte=i, elapsed__lt=max).count()
             })
-
         self.save()
 
     class Meta:
@@ -86,6 +86,51 @@ class CrawlQueue(models.Model):
 
     date_added = models.DateTimeField(default=datetime.datetime.now(), auto_now_add=True)
     last_modified = models.DateTimeField(default=datetime.datetime.now(), auto_now=True, auto_now_add=True)
+
+class URLManager(models.Manager):
+
+    def generate_stats(self):
+        urls = {}
+        current_date = None
+        processed_urls_for_date = {}
+        for c in CrawledLink.objects.filter(crawl__status="ended").order_by("-date_added"):
+            if c.url not in urls.keys():
+                urls[c.url] = {"crawled_links":[],"url":c.url}
+            if current_date == None or current_date > c.date_added.date():
+                urls[c.url]["crawled_links"].append(c)
+                current_date = c.date_added.date()
+
+        for url in urls.values():
+            print url["url"]
+            url["historical_status_codes"] = []
+            for c in url["crawled_links"]:
+                url["historical_status_codes"].append({
+                    "date": c.date_added.date().strftime('%Y-%m-%d'),
+                    "value": c.status_code
+                })
+            u, c = URL.objects.get_or_create(url=url["url"], url_255=url["url"][:255])
+            u.stats = {"historical_status_codes":url["historical_status_codes"]}
+            print u.stats
+            u.save()
+
+            #for c in CrawledLink.objects.filter(url_255=url["url"][:255]):
+            #    if not c.stats:
+            #        c.stats = {}
+            #    c.stats["historical_status_codes"] = url["historical_status_codes"]
+            #    c.save()
+
+class URL(models.Model):
+    url = models.TextField()
+    url_255 = models.CharField(max_length=255)
+    stats = PickledObjectField(default={})
+    stats_json = models.TextField(default="")
+
+    objects = URLManager()
+
+    def save(self, *args, **kwargs):
+        self.url_255 = self.url[:255]
+        self.stats_json = json.dumps(self.stats)
+        super(URL, self).save(*args, **kwargs)
 
 class CrawledLinkManager(models.Manager):
 
@@ -99,6 +144,8 @@ class CrawledLinkManager(models.Manager):
 class CrawledLink(models.Model):
     crawl = models.ForeignKey(Crawl)
     url = models.TextField()
+    stats = PickledObjectField(default={})
+    stats_json = models.TextField(default="")
     status_code = models.IntegerField()
     elapsed = models.FloatField(default=0)
     contents = models.TextField(blank=True, null=True)
@@ -115,6 +162,7 @@ class CrawledLink(models.Model):
 
     def save(self, *args, **kwargs):
         self.url_255 = self.url[:255]
+        self.stats_json = json.dumps(self.stats)
         if self.contents:
             self.contents = encoding.smart_str(self.contents, encoding='ascii', errors='ignore')
             self.contents_hash = hashlib.sha224(self.contents).hexdigest()

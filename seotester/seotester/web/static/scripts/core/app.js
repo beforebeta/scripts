@@ -119,6 +119,28 @@ var App = function () {
 
     //* END:CORE HANDLERS *//
 
+    // Handles scrollable contents using jQuery SlimScroll plugin.
+    var handleScrollers = function () {
+        $('.scroller').each(function () {
+            var height;
+            if ($(this).attr("data-height")) {
+                height = $(this).attr("data-height");
+            } else {
+                height = $(this).css('height');
+            }
+            $(this).slimScroll({
+                allowPageScroll: true, // allow page scroll when the element scroll is ended
+                size: '7px',
+                color: ($(this).attr("data-handle-color")  ? $(this).attr("data-handle-color") : '#bbb'),
+                railColor: ($(this).attr("data-rail-color")  ? $(this).attr("data-rail-color") : '#eaeaea'),
+                position: isRTL ? 'left' : 'right',
+                height: height,
+                alwaysVisible: ($(this).attr("data-always-visible") == "1" ? true : false),
+                railVisible: ($(this).attr("data-rail-visible") == "1" ? true : false),
+                disableFadeOut: true
+            });
+        });
+    };
 
     // CRAWL DATA
     var retrieveCrawlStats = function(crawl_id, callback) {
@@ -194,19 +216,20 @@ var App = function () {
             //core handlers
             handleInit(); // initialize core variables
             setupClickHandlers();
+
         },
 
         //main function to initiate core javascript after ajax complete
         initAjax: function () {
             handleScrollers(); // handles slim scrolling contents
-            handleSelect2(); // handle custom Select2 dropdowns
-            handleDropdowns(); // handle dropdowns
-            handleTooltips(); // handle bootstrap tooltips
-            handlePopovers(); // handles bootstrap popovers
-            handleAccordions(); //handles accordions
-            handleUniform(); // hanfle custom radio & checkboxes
-            handleBootstrapSwitch(); // handle bootstrap switch plugin
-            handleDropdownHover() // handles dropdown hover
+//            handleSelect2(); // handle custom Select2 dropdowns
+//            handleDropdowns(); // handle dropdowns
+//            handleTooltips(); // handle bootstrap tooltips
+//            handlePopovers(); // handles bootstrap popovers
+//            handleAccordions(); //handles accordions
+//            handleUniform(); // hanfle custom radio & checkboxes
+//            handleBootstrapSwitch(); // handle bootstrap switch plugin
+//            handleDropdownHover() // handles dropdown hover
         },
 
         //public function to fix the sidebar and content height accordingly

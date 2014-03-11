@@ -14,6 +14,7 @@ urlpatterns = patterns(
     url(r'^$', 'index', name='index'),
     url(r'^check_links/(?P<crawl_id>[0-9]+)/(?P<status_code>[0-9]+)$', 'check_links', name='check_links'),
     url(r'^link/(?P<link_id>[0-9]+)$', 'link_detail', name='link_detail'),
+    url(r'^crawl/(?P<crawl_id>[0-9]+)$', 'crawl_detail', name='crawl_detail'),
 )
 
 urlpatterns += patterns('',

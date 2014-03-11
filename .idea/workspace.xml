@@ -2,21 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="270bbb49-4907-4f67-b437-01ba327e9ab6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seotester/seotester/main/management/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seotester/seotester/main/management/commands/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seotester/seotester/main/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seotester/seotester/main/management/commands/crawl.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/seotester/seotester/main/migrations/0001_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/seotester/seotester/main/migrations/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/seotester/seotester/seotester.db" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seotester/seotester/web/static/scripts/core/app.js" afterPath="$PROJECT_DIR$/seotester/seotester/web/static/scripts/core/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seotester/seotester/web/templates/crawl_detail.html" afterPath="$PROJECT_DIR$/seotester/seotester/web/templates/crawl_detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seotester/seotester/web/templates/link_detail.html" afterPath="$PROJECT_DIR$/seotester/seotester/web/templates/link_detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seotester/seotester/main/models.py" afterPath="$PROJECT_DIR$/seotester/seotester/main/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scripts.iml" afterPath="$PROJECT_DIR$/.idea/scripts.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seotester/seotester/settings.py" afterPath="$PROJECT_DIR$/seotester/seotester/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pushpenny/test_sitemap.py" afterPath="$PROJECT_DIR$/pushpenny/test_sitemap.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seotester/seotester/urls.py" afterPath="$PROJECT_DIR$/seotester/seotester/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seotester/seotester/web/urls.py" afterPath="$PROJECT_DIR$/seotester/seotester/web/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seotester/seotester/web/views.py" afterPath="$PROJECT_DIR$/seotester/seotester/web/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seotester/.idea/workspace.xml" afterPath="$PROJECT_DIR$/seotester/.idea/workspace.xml" />
     </list>
     <ignored path="scripts.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,7 +37,7 @@
       <file leaf-file-name="test_sitemap.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pushpenny/test_sitemap.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="28" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.65831435" vertical-offset="37" max-vertical-offset="915">
+            <state line="16" column="24" selection-start="416" selection-end="416" vertical-scroll-proportion="0.20615034" vertical-offset="14" max-vertical-offset="915">
               <folding />
             </state>
           </provider>
@@ -176,84 +171,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="seotester" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="seotester" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="seotester" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="seotester" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="management" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="seotester" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="seotester" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="management" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="commands" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="pushpenny" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -264,14 +181,14 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="full.screen.before.presentation.mode" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="full.screen.before.presentation.mode" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../env/scripts/bin/python" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -374,6 +291,9 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -395,9 +315,6 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -469,7 +386,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1680" height="1024" extended-state="0" />
+    <frame x="0" y="22" width="1680" height="1024" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -477,7 +394,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25275397" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17747858" sideWeight="0.670354" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18482251" sideWeight="0.670354" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964602" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -507,9 +424,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1750306" sideWeight="0.670354" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -581,16 +498,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/seotester/seotester/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="158" selection-end="158" vertical-scroll-proportion="0.17942584" vertical-offset="0" max-vertical-offset="418">
-          <folding />
-        </state>
+        <state line="5" column="0" selection-start="158" selection-end="158" vertical-scroll-proportion="0.17942584" vertical-offset="0" max-vertical-offset="418" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/seotester/seotester/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="21" selection-start="4641" selection-end="4641" vertical-scroll-proportion="0.0" vertical-offset="1920" max-vertical-offset="2565">
-          <folding />
-        </state>
+        <state line="128" column="21" selection-start="4641" selection-end="4641" vertical-scroll-proportion="0.0" vertical-offset="1920" max-vertical-offset="2565" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/seotester/seotester/main/models.py">
@@ -609,7 +522,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pushpenny/test_sitemap.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="28" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.65831435" vertical-offset="37" max-vertical-offset="915">
+        <state line="16" column="24" selection-start="416" selection-end="416" vertical-scroll-proportion="0.20615034" vertical-offset="14" max-vertical-offset="915">
           <folding />
         </state>
       </provider>

@@ -129,6 +129,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'south',
     'rest_framework',
+    'django.contrib.humanize',
     # Uncomment the next line to enable the admin:
     # Uncomment the next line to enable admin documentation:
     #'django.contrib.admindocs',

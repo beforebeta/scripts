@@ -54,5 +54,5 @@ if __name__ == "__main__":
     for url in test_urls:
         urls.append(["%s/%s" % (str(index), str(len(test_urls))), url])
         index += 1
-    p = Pool(20)
+    p = Pool(10)
     p.map(test_link_for_301, urls)

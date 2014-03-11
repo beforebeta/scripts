@@ -155,7 +155,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						</div>
 						<div class="details">
 							<div class="number">
-								 {{ link.elapsed }} s
+								 {{ link.elapsed | floatformat:3 }} s
 							</div>
 							<div class="desc">
 								 Response Time
@@ -197,6 +197,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			<!-- END DASHBOARD STATS -->
 			<div class="clearfix">
 			</div>
+
 			<div class="row">
 				<div class="col-md-6 col-sm-6">
                     <div class="portlet box blue">
@@ -213,6 +214,45 @@ License: You must have a valid license purchased only from themeforest(the above
 					</div>
 				</div>
                 <div class="col-md-6 col-sm-6">
+
+                    <div class="portlet box blue">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-calendar"></i>Crawl Stats
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="sparkline-chart">
+										<div class="number" style="width: 130px; height: 55px; padding-top:5px;font-size:14px;">
+                                            {{ link.last_modified }}
+                                        </div>
+										<span style="font-size:14px;">Crawled</span>
+									</div>
+								</div>
+								<div class="margin-bottom-10 visible-sm">
+								</div>
+								<div class="col-md-4">
+									<div class="sparkline-chart">
+										<div class="number" style="width: 130px; height: 55px; padding-top:5px;font-size:14px;">
+                                            {{ link.crawl.stats.avg_response_time | floatformat:2 }} s
+                                        </div>
+										<span style="font-size:14px;">Avg. Response Time</span>
+									</div>
+								</div>
+								<div class="margin-bottom-10 visible-sm">
+								</div>
+								<div class="col-md-4">
+									<div class="sparkline-chart">
+										<div class="number" id="sparkline_line"><canvas width="100" height="55" style="display: inline-block; width: 100px; height: 55px; vertical-align: top;"></canvas></div>
+										<span style="font-size:14px;">Network</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
                     <div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
@@ -220,7 +260,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 						</div>
 						<div class="portlet-body">
-                            <div id="latest_crawl_response_times_div" style="height:400px;">
+                            <div id="latest_crawl_response_times_div" style="height:217px;">
 
                             </div>
 						</div>
@@ -241,17 +281,31 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="task-content">
 								<div class="scroller" style="height: 305px;" data-always-visible="1" data-rail-visible1="1">
 									<ul class="task-list">
-                                        {% for backlink in link.backlinks %}
-{#										<li data-link_id="{{ backlink.id }}">#}
-{#											<div class="task-title">#}
-{#												<span class="task-title-sp">#}
-{#													 <a href="{{  backlink.url }}" target="_blank">{{  backlink.backlink_url }}</a>#}
-{#												</span>#}
-{#												<span class="label label-sm label-{% if backlink.backlink_url_status_code == 200 %}success{% else %}warning{% endif %}">#}
-{#													 {{ backlink.backlink_url_status_code }}#}
-{#												</span>#}
-{#											</div>#}
-{#										</li>#}
+                                        {% for outbound_link in outboundlinks_info %}
+										<li>
+											<div class="task-title">
+												<span class="task-title-sp">
+													 <a href="{{  outbound_link.outbound_link_url }}" target="_blank">{{  outbound_link.outbound_link_url }}</a>
+												</span>
+												<span class="label label-sm label-{% if outbound_link.outbound_url_status_code == 200 %}success{% else %}warning{% endif %}">
+													 {{ outbound_link.outbound_url_status_code }}
+												</span>
+											</div>
+											<div class="task-config">
+												<div class="task-config-btn btn-group">
+													<a class="btn btn-xs default" href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+														<i class="fa fa-cog"></i><i class="fa fa-angle-down"></i>
+													</a>
+													<ul class="dropdown-menu pull-right">
+														<li>
+															<a href="/link/{{ outbound_link.outbound_url_crawled_link_id }}" target="_blank">
+																<i class="fa fa-eye"></i>See
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</li>
                                         {% endfor %}
 									</ul>
 									<!-- END START TASK LIST -->
@@ -374,6 +428,11 @@ License: You must have a valid license purchased only from themeforest(the above
 <script>
 jQuery(document).ready(function() {    
    App.init(); // initlayout and core plugins
+   window.onload = function(){
+       App.initAjax();
+   };
+
+
 });
 </script>
 <!-- END JAVASCRIPTS -->
