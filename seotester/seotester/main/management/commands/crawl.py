@@ -2,18 +2,14 @@ import traceback
 import uuid
 from django.core.management import BaseCommand
 import datetime
-import sys
+
 import requests
+from seotester import print_stack_trace
 from seotester.main.models import Crawl, CrawlQueue, CrawledLink, BackLink
 from multiprocessing import Pool
 from multiprocessing import Lock
 from BeautifulSoup import BeautifulSoup
 import urlparse
-
-def print_stack_trace():
-    print '-'*60
-    traceback.print_exc(file=sys.stdout)
-    print '-'*60
 
 class Command(BaseCommand):
 

@@ -2,24 +2,185 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73da0f58-dbbc-4aa2-8feb-122d1bde3871" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seotester/main/management/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seotester/main/management/commands/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seotester/web/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seotester/web/static/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seotester/web/static/js/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seotester/main/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seotester/main/management/commands/crawl.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/seotester/main/migrations/0001_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/seotester/main/migrations/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/seotester/seotester.db" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/misc.xml" afterPath="$PROJECT_DIR$/../.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seotester/web/templates/crawl_detail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seotester/indexes.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seotester/web/templates/link_detail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seotester/web/static/js/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seotester/web/urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/seotester/web/views.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/__init__.py" afterPath="$PROJECT_DIR$/seotester/main/management/commands/stats.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/__init__.py" afterPath="$PROJECT_DIR$/seotester/web/serializers.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/amcharts.js" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/amcharts.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/exporting/amexport.js" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/exporting/amexport.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/exporting/canvg.js" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/exporting/canvg.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/exporting/filesaver.js" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/exporting/filesaver.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/exporting/jspdf.js" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/exporting/jspdf.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/exporting/jspdf.plugin.addimage.js" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/exporting/jspdf.plugin.addimage.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/exporting/rgbcolor.js" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/exporting/rgbcolor.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/funnel.js" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/funnel.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/gauge.js" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/gauge.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/images/dragIcon.gif" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/images/dragIcon.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/images/dragIconBlack.gif" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/images/dragIconBlack.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/images/dragIconH.gif" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/images/dragIconH.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/images/dragIconHBlack.gif" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/images/dragIconHBlack.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/images/export.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/images/export.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/images/exportWhite.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/images/exportWhite.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/images/lens.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/images/lens.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/images/lensWhite.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/images/lensWhite.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/black/pattern1.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/black/pattern1.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/black/pattern10.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/black/pattern10.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/black/pattern11.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/black/pattern11.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/black/pattern12.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/black/pattern12.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/black/pattern13.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/black/pattern13.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/black/pattern14.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/black/pattern14.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/black/pattern15.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/black/pattern15.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/black/pattern16.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/black/pattern16.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/black/pattern17.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/black/pattern17.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/black/pattern18.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/black/pattern18.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/black/pattern19.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/black/pattern19.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/black/pattern2.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/black/pattern2.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/black/pattern20.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/black/pattern20.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/black/pattern21.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/black/pattern21.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/black/pattern3.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/black/pattern3.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/black/pattern4.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/black/pattern4.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/black/pattern5.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/black/pattern5.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/black/pattern6.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/black/pattern6.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/black/pattern7.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/black/pattern7.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/black/pattern8.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/black/pattern8.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/black/pattern9.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/black/pattern9.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/chalk/pattern1.jpg" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/chalk/pattern1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/chalk/pattern1r.jpg" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/chalk/pattern1r.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/chalk/pattern2.jpg" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/chalk/pattern2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/chalk/pattern3.jpg" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/chalk/pattern3.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/chalk/pattern4.jpg" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/chalk/pattern4.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/chalk/pattern5.jpg" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/chalk/pattern5.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/chalk/pattern6.jpg" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/chalk/pattern6.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/white/pattern1.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/white/pattern1.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/white/pattern10.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/white/pattern10.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/white/pattern11.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/white/pattern11.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/white/pattern12.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/white/pattern12.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/white/pattern13.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/white/pattern13.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/white/pattern14.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/white/pattern14.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/white/pattern15.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/white/pattern15.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/white/pattern16.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/white/pattern16.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/white/pattern17.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/white/pattern17.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/white/pattern18.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/white/pattern18.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/white/pattern19.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/white/pattern19.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/white/pattern2.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/white/pattern2.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/white/pattern20.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/white/pattern20.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/white/pattern21.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/white/pattern21.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/white/pattern3.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/white/pattern3.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/white/pattern4.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/white/pattern4.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/white/pattern5.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/white/pattern5.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/white/pattern6.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/white/pattern6.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/white/pattern7.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/white/pattern7.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/white/pattern8.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/white/pattern8.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/patterns/white/pattern9.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/patterns/white/pattern9.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/pie.js" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/pie.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/radar.js" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/radar.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/serial.js" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/serial.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/themes/black.js" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/themes/black.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/themes/chalk.js" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/themes/chalk.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/themes/dark.js" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/themes/dark.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/themes/light.js" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/themes/light.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/themes/patterns.js" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/themes/patterns.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/amcharts/xy.js" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/amcharts/xy.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/changeLog.txt" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/changeLog.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/images/logo.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/images/logo.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/images/style.css" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/images/style.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/index.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/_JSON_angularGauge.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/_JSON_angularGauge.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/_JSON_areaStacked.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/_JSON_areaStacked.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/_JSON_barAndLineMix.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/_JSON_barAndLineMix.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/_JSON_lineWithFilledValueRanges.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/_JSON_lineWithFilledValueRanges.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/_JSON_lineWithScrollAndZoom.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/_JSON_lineWithScrollAndZoom.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/_JSON_lineWithTrendLines.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/_JSON_lineWithTrendLines.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/_JSON_pieWithLegend.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/_JSON_pieWithLegend.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/_JSON_radarSimple.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/_JSON_radarSimple.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/_JSON_xyBubbleWithZoom.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/_JSON_xyBubbleWithZoom.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/_exporting_to_multiple_formats.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/_exporting_to_multiple_formats.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/_exporting_to_png.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/_exporting_to_png.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/_usingThemes.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/_usingThemes.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/angularGauge.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/angularGauge.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/angularGaugeWithTwoAxes.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/angularGaugeWithTwoAxes.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/area100PercentStacked.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/area100PercentStacked.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/areaStacked.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/areaStacked.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/areaWithTimeBasedData.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/areaWithTimeBasedData.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/bar3D.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/bar3D.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/barAndLineMix.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/barAndLineMix.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/barClustered.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/barClustered.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/barFloating.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/barFloating.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/barStacked.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/barStacked.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/barWithBackgroundImage.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/barWithBackgroundImage.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/bulletChart.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/bulletChart.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/candleStick.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/candleStick.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/clock.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/clock.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/clockWithTwoFaces.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/clockWithTwoFaces.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/column100PercentStacked.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/column100PercentStacked.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/column3D.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/column3D.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/column3DStacked.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/column3DStacked.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/columnAndLineMix.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/columnAndLineMix.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/columnRotatedSeries.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/columnRotatedSeries.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/columnSimple.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/columnSimple.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/columnStacked.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/columnStacked.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/columnStackedAndClustered.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/columnStackedAndClustered.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/columnWithGradientFills.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/columnWithGradientFills.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/columnWithImages.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/columnWithImages.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/columnWithPatterns.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/columnWithPatterns.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/errorChart.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/errorChart.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/fillBetweenTwoLines.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/fillBetweenTwoLines.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/funnelChart.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/funnelChart.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/handDrawnChart.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/handDrawnChart.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/images/0.gif" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/images/0.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/images/1.gif" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/images/1.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/images/2.gif" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/images/2.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/images/3.gif" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/images/3.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/images/bg.jpg" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/images/bg.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/images/bgSky.jpg" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/images/bgSky.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/images/bicycle.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/images/bicycle.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/images/board.jpg" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/images/board.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/images/car.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/images/car.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/images/motorcycle.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/images/motorcycle.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/images/redstar.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/images/redstar.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/images/star.png" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/images/star.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/lineSmoothed.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/lineSmoothed.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/lineStep.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/lineStep.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/lineStepNoRisers.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/lineStepNoRisers.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/lineWithChangingColor.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/lineWithChangingColor.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/lineWithCustomBullets.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/lineWithCustomBullets.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/lineWithDataGaps.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/lineWithDataGaps.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/lineWithDateBasedData.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/lineWithDateBasedData.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/lineWithDifferentBulletSizes.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/lineWithDifferentBulletSizes.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/lineWithDurationOnValueAxis.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/lineWithDurationOnValueAxis.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/lineWithFilledValueRanges.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/lineWithFilledValueRanges.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/lineWithLogarithmicValueAxis.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/lineWithLogarithmicValueAxis.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/lineWithMultipleValueAxes.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/lineWithMultipleValueAxes.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/lineWithReversedValueAxis.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/lineWithReversedValueAxis.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/lineWithTrendLines.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/lineWithTrendLines.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/microCharts.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/microCharts.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/ohlc.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/ohlc.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/pie3D.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/pie3D.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/pieDonut3D.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/pieDonut3D.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/pieSimple.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/pieSimple.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/pieWithLegend.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/pieWithLegend.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/pieWithPatterns.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/pieWithPatterns.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/pyramidChart.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/pyramidChart.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/radarPolar.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/radarPolar.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/radarSimple.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/radarSimple.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/style.css" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/style.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/waterFallChart.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/waterFallChart.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/xyBubbleSimple.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/xyBubbleSimple.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/xyBubbleWithZoom.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/xyBubbleWithZoom.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/xyError.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/xyError.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/samples/xyScatter.html" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/samples/xyScatter.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/seotester/web/static/js/amcharts_3.4.5/thirdPartySoftwareList.txt" afterPath="$PROJECT_DIR$/seotester/web/static/plugins/amcharts/thirdPartySoftwareList.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seotester/__init__.py" afterPath="$PROJECT_DIR$/seotester/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seotester/main/management/commands/crawl.py" afterPath="$PROJECT_DIR$/seotester/main/management/commands/crawl.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seotester/main/models.py" afterPath="$PROJECT_DIR$/seotester/main/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/scripts.iml" afterPath="$PROJECT_DIR$/../.idea/scripts.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../requirements.txt" afterPath="$PROJECT_DIR$/../requirements.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seotester/settings.py" afterPath="$PROJECT_DIR$/seotester/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../pushpenny/test_sitemap.py" afterPath="$PROJECT_DIR$/../pushpenny/test_sitemap.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seotester/urls.py" afterPath="$PROJECT_DIR$/seotester/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/vcs.xml" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="seotester.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,32 +208,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/seotester/main/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="0" selection-start="2646" selection-end="2646" vertical-scroll-proportion="0.3321918" vertical-offset="744" max-vertical-offset="1620">
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
+            <state line="157" column="36" selection-start="6040" selection-end="6068" vertical-scroll-proportion="0.0" vertical-offset="2082" max-vertical-offset="2535">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/seotester/main/admin.py">
+      <file leaf-file-name="indexes.sql" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/seotester/indexes.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="26" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
+            <state line="2" column="75" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="120">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="crawl.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="stats.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/seotester/main/management/commands/stats.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="20" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="240">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="crawl_detail.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/seotester/web/templates/crawl_detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2147" column="20" selection-start="70487" selection-end="70487" vertical-scroll-proportion="0.0" vertical-offset="31651" max-vertical-offset="32490">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="link_detail.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/seotester/web/templates/link_detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="368" column="31" selection-start="15099" selection-end="15099" vertical-scroll-proportion="0.0" vertical-offset="4981" max-vertical-offset="5820">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/seotester/web/static/scripts/core/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="200" column="32" selection-start="7146" selection-end="7146" vertical-scroll-proportion="0.0" vertical-offset="3000" max-vertical-offset="7590">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="crawl.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/seotester/main/management/commands/crawl.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="15" selection-start="922" selection-end="922" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1725">
+            <state line="92" column="20" selection-start="3349" selection-end="3349" vertical-scroll-proportion="0.9246575" vertical-offset="570" max-vertical-offset="1665">
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -80,22 +273,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/seotester/settings.py">
+      <file leaf-file-name="style-responsive.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/seotester/web/static/css/style-responsive.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="13" selection-start="1140" selection-end="1140" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="2565">
+            <state line="585" column="5" selection-start="12215" selection-end="12215" vertical-scroll-proportion="0.0" vertical-offset="8751" max-vertical-offset="14685">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/seotester/urls.py">
+        <entry file="file://$PROJECT_DIR$/seotester/web/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="17" selection-start="525" selection-end="525" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-              <folding>
-                <marker date="1394208573000" expanded="true" signature="52:157" placeholder="..." />
-              </folding>
+            <state line="12" column="22" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="525">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/seotester/web/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="82" column="77" selection-start="2797" selection-end="2797" vertical-scroll-proportion="0.0" vertical-offset="939" max-vertical-offset="1815">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -118,11 +318,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/seotester/urls.py" />
+        <option value="$PROJECT_DIR$/seotester/web/static/scripts/custom/index.js" />
+        <option value="$PROJECT_DIR$/seotester/main/management/commands/generate_stats.py" />
         <option value="$PROJECT_DIR$/seotester/settings.py" />
-        <option value="$PROJECT_DIR$/seotester/main/admin.py" />
-        <option value="$PROJECT_DIR$/seotester/main/management/commands/crawl.py" />
+        <option value="$PROJECT_DIR$/seotester/web/serializers.py" />
+        <option value="$PROJECT_DIR$/seotester/main/management/commands/stats.py" />
+        <option value="$PROJECT_DIR$/seotester/web/templates/index.html" />
+        <option value="$PROJECT_DIR$/seotester/web/urls.py" />
+        <option value="$PROJECT_DIR$/seotester/web/static/css/style-responsive.css" />
+        <option value="$PROJECT_DIR$/seotester/__init__.py" />
+        <option value="$PROJECT_DIR$/seotester/indexes.sql" />
         <option value="$PROJECT_DIR$/seotester/main/models.py" />
+        <option value="$PROJECT_DIR$/seotester/web/views.py" />
+        <option value="$PROJECT_DIR$/seotester/web/templates/link_detail.html" />
+        <option value="$PROJECT_DIR$/seotester/web/templates/crawl_detail.html" />
+        <option value="$PROJECT_DIR$/seotester/web/static/scripts/core/app.js" />
+        <option value="$PROJECT_DIR$/seotester/main/management/commands/crawl.py" />
       </list>
     </option>
   </component>
@@ -157,7 +368,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -204,7 +414,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -222,11 +432,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
+              <option name="myItemId" value="management" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -244,20 +454,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
+              <option name="myItemId" value="management" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="commands" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -267,6 +478,7 @@
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../misc" />
     <property name="FullScreen" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
@@ -277,6 +489,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/seotester/web/static/plugins" />
       <recent name="$PROJECT_DIR$/seotester/web/static/js" />
     </key>
   </component>
@@ -508,7 +721,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1680" height="1024" extended-state="0" />
+    <frame x="0" y="22" width="1680" height="1024" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -516,7 +729,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986537" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25275397" sideWeight="0.67016804" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20501836" sideWeight="0.67016804" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32983193" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -543,93 +756,104 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/seotester/main/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="21" selection-start="1806" selection-end="1806" vertical-scroll-proportion="0.0" vertical-offset="498" max-vertical-offset="1005">
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/seotester/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="13" selection-start="1140" selection-end="1140" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="2565">
+        <state line="181" column="78" selection-start="6288" selection-end="6288" vertical-scroll-proportion="1.9246576" vertical-offset="1029" max-vertical-offset="2835" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../env/scripts/lib/python2.7/site-packages/rest_framework/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="909" column="12" selection-start="32651" selection-end="32651" vertical-scroll-proportion="-1.0022831" vertical-offset="14348" max-vertical-offset="16560" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seotester/web/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="536" selection-end="536" vertical-scroll-proportion="0.32534248" vertical-offset="0" max-vertical-offset="876" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seotester/web/static/scripts/custom/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="48" selection-start="1464" selection-end="1471" vertical-scroll-proportion="0.3324937" vertical-offset="543" max-vertical-offset="12930" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seotester/web/static/scripts/custom/tasks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="43" selection-start="84" selection-end="85" vertical-scroll-proportion="0.18891688" vertical-offset="0" max-vertical-offset="397" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seotester/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seotester/main/management/commands/stats.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="20" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/seotester/urls.py">
+    <entry file="file://$PROJECT_DIR$/seotester/web/static/css/style-responsive.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="17" selection-start="525" selection-end="525" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="345">
-          <folding>
-            <marker date="1394208573000" expanded="true" signature="52:157" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seotester/main/management/commands/crawl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="44" selection-start="2079" selection-end="2079" vertical-scroll-proportion="0.0" vertical-offset="684" max-vertical-offset="1125">
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seotester/main/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105">
+        <state line="585" column="5" selection-start="12215" selection-end="12215" vertical-scroll-proportion="0.0" vertical-offset="8751" max-vertical-offset="14685">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/seotester/main/tests.py">
+    <entry file="file://$PROJECT_DIR$/seotester/web/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="924">
+        <state line="12" column="22" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seotester/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="17" selection-start="525" selection-end="525" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-          <folding>
-            <marker date="1394208573000" expanded="true" signature="52:157" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seotester/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="13" selection-start="1140" selection-end="1140" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2565">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seotester/main/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="26" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seotester/main/management/commands/crawl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="15" selection-start="922" selection-end="922" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1725">
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/seotester/main/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="0" selection-start="2646" selection-end="2646" vertical-scroll-proportion="0.3321918" vertical-offset="744" max-vertical-offset="1620">
+        <state line="157" column="36" selection-start="6040" selection-end="6068" vertical-scroll-proportion="0.0" vertical-offset="2082" max-vertical-offset="2535">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seotester/indexes.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="75" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seotester/web/templates/link_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="368" column="31" selection-start="15099" selection-end="15099" vertical-scroll-proportion="0.0" vertical-offset="4981" max-vertical-offset="5820">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seotester/web/templates/crawl_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2147" column="20" selection-start="70487" selection-end="70487" vertical-scroll-proportion="0.0" vertical-offset="31651" max-vertical-offset="32490">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seotester/web/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="77" selection-start="2797" selection-end="2797" vertical-scroll-proportion="0.0" vertical-offset="939" max-vertical-offset="1815">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seotester/web/static/scripts/core/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="200" column="32" selection-start="7146" selection-end="7146" vertical-scroll-proportion="0.0" vertical-offset="2625" max-vertical-offset="7590">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seotester/main/management/commands/crawl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="20" selection-start="3349" selection-end="3349" vertical-scroll-proportion="0.9246575" vertical-offset="570" max-vertical-offset="1665">
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
