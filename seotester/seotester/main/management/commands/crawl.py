@@ -14,12 +14,13 @@ import urlparse
 class Command(BaseCommand):
 
     def handle(self, *args, **options):
-        assert len(args) == 1, "the root URL argument must be provided to start the crawl!"
-        self.crawl(args[0])
+        assert len(args) == 3, "arg1 = root url, arg2 = number of threads, arg3 = user or bot"
+        assert args[2].lower() in ["bot", "user"]
+        self.crawl(args[0], int(args[1]), args[2])
 
-    def crawl(self, root_url):
+    def crawl(self, root_url, number_of_threads, crawl_type):
         started = datetime.datetime.now()
-        crawl = Crawl(crawl_id=uuid.uuid4().hex, root_url=root_url, started=started, ended=started, status="started")
+        crawl = Crawl(crawl_id=uuid.uuid4().hex, root_url=root_url, started=started, ended=started, status="started", crawl_type=crawl_type)
         try:
             crawl.robots_text = requests.get(urlparse.urljoin(root_url, "robots.txt")).content
         except:
@@ -29,7 +30,7 @@ class Command(BaseCommand):
             stats = {}
             stats["root_url"] = root_url
             CrawlQueue(crawl=crawl, url=root_url).save()
-            self.begin_crawl(crawl)
+            self.begin_crawl(crawl, number_of_threads)
             crawl.ended = datetime.datetime.now()
             crawl.status = "ended"
             crawl.save()
@@ -39,14 +40,14 @@ class Command(BaseCommand):
             crawl.status = "exception"
             crawl.save()
 
-    def begin_crawl(self, crawl):
+    def begin_crawl(self, crawl, number_of_threads):
         l = Lock()
         crawl_queued_links.lock = l
         #feeding the beast before the storm
         crawl_queued_links((0, crawl, True))
         while True:
             p = Pool(None, crawl_queued_links_init, [l])
-            p.map(crawl_queued_links, [(i, crawl, False) for i in range(20)])
+            p.map(crawl_queued_links, [(i, crawl, False) for i in range(number_of_threads)])
             #crawl_queue(crawl.id)
             p.close()
             p.join()
@@ -84,9 +85,12 @@ def crawl_queued_links(args):
             soup = BeautifulSoup(crawled_link.contents)
             outgoing_links = []
             for a in soup.findAll("a"):
-                link = urlparse.urljoin(crawl.root_url, a["href"])
-                if link.startswith(crawl.root_url):
-                    outgoing_links.append(link)
+                try:
+                    link = urlparse.urljoin(crawl.root_url, a["href"])
+                    if link.startswith(crawl.root_url):
+                        outgoing_links.append(link)
+                except:
+                    pass
             outgoing_links = list(set(outgoing_links))
             for link in outgoing_links:
                 CrawlQueue(crawl=crawl, url=link).save()

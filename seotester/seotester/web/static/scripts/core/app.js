@@ -216,7 +216,102 @@ var App = function () {
             //core handlers
             handleInit(); // initialize core variables
             setupClickHandlers();
+             window.onload = function(){
+                App.initAjax();
+            };
+        },
 
+        loadLineChartData: function(div_id, data) {
+            var chartData = data;
+            var chart = AmCharts.makeChart(div_id, {
+                "type": "serial",
+                "theme": "none",
+                "pathToImages": "http://www.amcharts.com/lib/3/images/",
+                "dataProvider": chartData,
+                "valueAxes": [{
+                    "axisAlpha": 0.2,
+                    "dashLength": 1,
+                    "position": "left",
+                    "guides": [{
+                                "fillAlpha": 0.1,
+                                "fillColor": "#28b779",
+                                "lineAlpha": 0,
+                                "toValue": 220,
+                                "value": 0
+                                }, {
+                                    "fillAlpha": 0.1,
+                                    "fillColor": "#e7191b",
+                                    "lineAlpha": 0,
+                                    "toValue": 999,
+                                    "value": 220
+                                }]
+                }],
+                "graphs": [{
+                    "id":"g1",
+                    "balloonText": "[[category]]<br /><b><span style='font-size:14px;'>value: [[value]]</span></b>",
+                    "bullet": "round",
+                    "bulletBorderAlpha": 1,
+                    "bulletColor":"#FFFFFF",
+                    "hideBulletsCount": 50,
+                    "title": "red line",
+                    "valueField": "value",
+                    "useLineColorForBulletBorder":true
+                }],
+                "chartScrollbar": {
+                    "autoGridCount": true,
+                    "graph": "g1",
+                    "scrollbarHeight": 40
+                },
+                "chartCursor": {
+                    "cursorPosition": "mouse"
+                },
+                "categoryField": "date",
+                "categoryAxis": {
+                    "parseDates": true,
+                    "dataDateFormat": "YYYY-MM-DD",
+                    "dateFormat": "YYYY-MM-DD",
+                    "axisColor": "#DADADA",
+                    "dashLength": 1,
+                    "minorGridEnabled": true
+                },
+                "exportConfig":{
+                  menuRight: '20px',
+                  menuBottom: '30px',
+                  menuItems: [{
+                  icon: 'http://www.amcharts.com/lib/3/images/export.png',
+                  format: 'png'
+                  }]
+                }
+            });
+
+            chart.addListener("rendered", zoomChart);
+            zoomChart();
+
+            // this method is called when chart is first inited as we listen for "dataUpdated" event
+            function zoomChart() {
+                // different zoom methods can be used - zoomToIndexes, zoomToDates, zoomToCategoryValues
+                chart.zoomToIndexes(chartData.length - 40, chartData.length - 1);
+            }
+        },
+
+        loadLinkHistoricalData: function(div_id, url, data_attribute) {
+            var _this = this;
+
+            $.ajax({
+                type: "POST",
+                cache: false,
+                dataType: "json",
+                url: '/url/stats',
+                data: {"url":url},
+                success: function(result){
+                    var data = result[data_attribute];
+                    data = data.reverse();
+                    _this.loadLineChartData(div_id, data);
+                },
+                error: function(xhr, ajaxOptions, thrownError){
+                    console.log(thrownError);
+                }
+            });
         },
 
         //main function to initiate core javascript after ajax complete

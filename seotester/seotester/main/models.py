@@ -26,6 +26,7 @@ class Message(models.Model):
 
 # Create your models here.
 class Crawl(models.Model):
+    crawl_type = models.CharField(max_length=50, default="bot") #bot or user
     crawl_id = models.CharField(max_length=32)
     root_url = models.TextField()
     robots_text = models.TextField(default="")
@@ -51,6 +52,9 @@ class Crawl(models.Model):
 
     def get_404_links(self):
         return self.crawledlink_set.filter(status_code=404)
+
+    def get_500_links(self):
+        return self.crawledlink_set.filter(status_code=500)
 
     def generate_stats(self):
         self.stats = {}
@@ -97,27 +101,30 @@ class URLManager(models.Manager):
             if c.url not in urls.keys():
                 urls[c.url] = {"crawled_links":[],"url":c.url}
             if current_date == None or current_date > c.date_added.date():
-                urls[c.url]["crawled_links"].append(c)
+                processed_urls_for_date = {}
                 current_date = c.date_added.date()
+            if c.url not in processed_urls_for_date:
+                urls[c.url]["crawled_links"].append(c)
+                processed_urls_for_date[c.url] = 1
 
         for url in urls.values():
-            print url["url"]
             url["historical_status_codes"] = []
+            url["response_times"] = []
             for c in url["crawled_links"]:
                 url["historical_status_codes"].append({
                     "date": c.date_added.date().strftime('%Y-%m-%d'),
                     "value": c.status_code
                 })
+                url["response_times"].append({
+                    "date": c.date_added.date().strftime('%Y-%m-%d'),
+                    "value": c.elapsed
+                })
             u, c = URL.objects.get_or_create(url=url["url"], url_255=url["url"][:255])
-            u.stats = {"historical_status_codes":url["historical_status_codes"]}
-            print u.stats
+            u.stats = {
+                "historical_status_codes": url["historical_status_codes"],
+                "response_times": url["response_times"]
+            }
             u.save()
-
-            #for c in CrawledLink.objects.filter(url_255=url["url"][:255]):
-            #    if not c.stats:
-            #        c.stats = {}
-            #    c.stats["historical_status_codes"] = url["historical_status_codes"]
-            #    c.save()
 
 class URL(models.Model):
     url = models.TextField()

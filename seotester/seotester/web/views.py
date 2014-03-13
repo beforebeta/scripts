@@ -1,9 +1,11 @@
 import json
 from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
+from django.template.defaultfilters import floatformat
+from django.views.decorators.csrf import csrf_exempt
 import requests
 from seotester import print_stack_trace
-from seotester.main.models import Crawl, CrawledLink, BackLink
+from seotester.main.models import Crawl, CrawledLink, BackLink, URL
 
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
@@ -85,6 +87,14 @@ def check_links(request, crawl_id, status_code):
         )
     return HttpResponse(json.dumps(links), content_type="application/json")
 
+@csrf_exempt
+def get_stats_for_url(request):
+    url = request.POST.get("url", "")
+    if not url:
+        raise Http404()
+    u = URL.objects.get(url_255=url[:255])
+    return HttpResponse(json.dumps(u.stats), content_type="application/json")
+
 def index(request):
     #context = {}
     #context["latest_crawl"] = Crawl.objects.filter(status="ended").order_by("-date_added")[0]
@@ -97,6 +107,13 @@ def crawl_detail(request, crawl_id):
     context["latest_crawl"] = Crawl.objects.get(id=crawl_id)
     context["crawls"] = Crawl.objects.filter(status="ended")[:5]
     return render(request, 'crawl_detail.html', context)
+
+def crawl_links(request, crawl_id):
+    crawl = Crawl.objects.get(id=crawl_id)
+    table = []
+    for c in crawl.crawledlink_set.all():
+        table.append([c.url, c.status_code, floatformat(c.elapsed, 3), c.id, c.elapsed])
+    return HttpResponse(json.dumps({"aaData": table}), content_type="application/json")
 
 def link_detail(request, link_id):
     context = {}

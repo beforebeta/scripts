@@ -1,14 +1,5 @@
 <!DOCTYPE html>
 
-<!-- 
-Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.1.1
-Version: 2.0.2
-Author: KeenThemes
-Website: http://www.keenthemes.com/
-Contact: support@keenthemes.com
-Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
-License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
--->
 <!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
 <!--[if !IE]><!-->
@@ -17,7 +8,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- BEGIN HEAD -->
 <head>
 <meta charset="utf-8"/>
-<title>Metronic | Admin Dashboard Template</title>
+<title>SEO Tester</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="" name="description"/>
@@ -103,7 +94,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				<div class="col-md-12">
 					<!-- BEGIN PAGE TITLE & BREADCRUMB-->
 					<h3 class="page-title">
-					Pushpenny SEO Dashboard: Link {{ link.id }} | {{ link.url }}
+					Pushpenny SEO Dashboard: Link {{ link.id }} | <a href="{{ link.url }}">{{ link.url }} <i class="fa fa-external-link"></i></a>
 					</h3>
 					<ul class="page-breadcrumb breadcrumb">
 						<li>
@@ -203,11 +194,11 @@ License: You must have a valid license purchased only from themeforest(the above
                     <div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-clock-o"></i>Reponse Times Historical
+								<i class="fa fa-clock-o"></i>Response Times Historical
 							</div>
 						</div>
 						<div class="portlet-body">
-                            <div id="latest_crawl_response_times_div" style="height:400px;">
+                            <div id="response_times_historical" style="height:400px;">
 
                             </div>
 						</div>
@@ -246,7 +237,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="col-md-4">
 									<div class="sparkline-chart">
 										<div class="number" id="sparkline_line"><canvas width="100" height="55" style="display: inline-block; width: 100px; height: 55px; vertical-align: top;"></canvas></div>
-										<span style="font-size:14px;">Network</span>
+										<span style="font-size:14px;">Trello Task</span>
 									</div>
 								</div>
 							</div>
@@ -256,11 +247,11 @@ License: You must have a valid license purchased only from themeforest(the above
                     <div class="portlet box blue">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-clock-o"></i>Status Codes Historical
+								<i class="fa fa-code"></i>Status Codes Historical
 							</div>
 						</div>
 						<div class="portlet-body">
-                            <div id="latest_crawl_response_times_div" style="height:217px;">
+                            <div id="status_codes_historical" style="height:217px;">
 
                             </div>
 						</div>
@@ -370,12 +361,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- BEGIN FOOTER -->
 <div class="footer">
 	<div class="footer-inner">
-		 2014 &copy; Metronic by keenthemes.
-	</div>
-	<div class="footer-tools">
-		<span class="go-top">
-			<i class="fa fa-angle-up"></i>
-		</span>
+		 2014 &copy; Digital First Ventures
 	</div>
 </div>
 <!-- END FOOTER -->
@@ -428,15 +414,12 @@ License: You must have a valid license purchased only from themeforest(the above
 <script>
 jQuery(document).ready(function() {    
    App.init(); // initlayout and core plugins
-   window.onload = function(){
-       App.initAjax();
-   };
-
-
+   App.loadLinkHistoricalData('status_codes_historical', '{{ link.url }}', "historical_status_codes");
+    App.loadLinkHistoricalData('response_times_historical', '{{ link.url }}', "response_times");
 });
 </script>
 <!-- END JAVASCRIPTS -->
 <!-- END BODY -->
-<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<!--<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>-->
 </body>
 </html>
