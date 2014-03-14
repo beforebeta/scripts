@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73da0f58-dbbc-4aa2-8feb-122d1bde3871" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seotester/web/templates/crawl_detail.html" afterPath="$PROJECT_DIR$/seotester/web/templates/crawl_detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seotester/web/templates/link_detail.html" afterPath="$PROJECT_DIR$/seotester/web/templates/link_detail.html" />
     </list>
     <ignored path="seotester.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,13 +30,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="crawl_detail.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/seotester/web/templates/crawl_detail.html">
+      <file leaf-file-name="link_detail.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/seotester/web/templates/link_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="411" column="54" selection-start="15609" selection-end="15609" vertical-scroll-proportion="0.37187126" vertical-offset="5853" max-vertical-offset="9045">
+            <state line="380" column="42" selection-start="14279" selection-end="14279" vertical-scroll-proportion="0.37187126" vertical-offset="5388" max-vertical-offset="6450">
               <folding>
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#4;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#4;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#div#4;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#div#4;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#div#4;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#div#4;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#4;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#6;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#6;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -62,7 +72,6 @@
       <list>
         <option value="$PROJECT_DIR$/seotester/web/static/arrays.txt" />
         <option value="$PROJECT_DIR$/seotester/web/urls.py" />
-        <option value="$PROJECT_DIR$/seotester/web/templates/link_detail.html" />
         <option value="$PROJECT_DIR$/seotester/web/static/plugins/datatables/css/demo_table.css" />
         <option value="$PROJECT_DIR$/seotester/main/management/commands/stats.py" />
         <option value="$PROJECT_DIR$/seotester/main/models.py" />
@@ -76,6 +85,7 @@
         <option value="$PROJECT_DIR$/seotester/urls.py" />
         <option value="$PROJECT_DIR$/seotester/web/views.py" />
         <option value="$PROJECT_DIR$/seotester/web/templates/crawl_detail.html" />
+        <option value="$PROJECT_DIR$/seotester/web/templates/link_detail.html" />
       </list>
     </option>
   </component>
@@ -476,11 +486,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/seotester/bin/out.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/seotester/main/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="47" selection-start="1355" selection-end="1355" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3225">
@@ -569,10 +574,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/seotester/web/templates/crawl_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="411" column="54" selection-start="15609" selection-end="15609" vertical-scroll-proportion="0.37187126" vertical-offset="5853" max-vertical-offset="9045">
+        <state line="506" column="40" selection-start="19256" selection-end="19256" vertical-scroll-proportion="0.35399285" vertical-offset="7293" max-vertical-offset="9045">
           <folding>
             <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seotester/web/templates/link_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="380" column="42" selection-start="14279" selection-end="14279" vertical-scroll-proportion="0.37187126" vertical-offset="5388" max-vertical-offset="6450">
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#4;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#4;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#div#4;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#div#4;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#div#4;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#div#4;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#4;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#6;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#6;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
