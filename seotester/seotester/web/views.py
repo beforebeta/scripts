@@ -1,9 +1,12 @@
+from functools import wraps
 import json
 from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.template.defaultfilters import floatformat
+from django.utils.decorators import available_attrs
 from django.views.decorators.csrf import csrf_exempt
 import requests
+from setuptools._backport.hashlib._sha256 import sha224
 from seotester import print_stack_trace
 from seotester.main.models import Crawl, CrawledLink, BackLink, URL
 
@@ -13,6 +16,28 @@ from seotester.web.serializers import UserSerializer, GroupSerializer, CrawlSeri
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
+
+import redis
+
+cache = redis.StrictRedis()
+
+def cache_response(seconds=0):
+    def decorator(func):
+        @wraps(func, assigned=available_attrs(func))
+        def inner(*args, **kwargs):
+            if seconds <= 0:
+                return func(*args, **kwargs)
+            key = sha224(str(func.__module__) + str(func.__name__) + str(args) + str(kwargs)).hexdigest()
+
+            response_raw = cache.get(key)
+            if response_raw:
+                response = json.loads(response_raw)
+            else:
+                response = func(*args, **kwargs)
+                cache.setex(key, seconds, json.dumps(response))
+            return response
+        return inner
+    return decorator
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -90,10 +115,13 @@ def check_links(request, crawl_id, status_code):
 @csrf_exempt
 def get_stats_for_url(request):
     url = request.POST.get("url", "")
-    if not url:
-        raise Http404()
-    u = URL.objects.get(url_255=url[:255])
-    return HttpResponse(json.dumps(u.stats), content_type="application/json")
+    @cache_response(60*30)
+    def internal(_url):
+        if not _url:
+            raise Http404()
+        u = URL.objects.get(url_255=_url[:255])
+        return u.stats
+    return HttpResponse(json.dumps(internal(url)), content_type="application/json")
 
 def index(request):
     #context = {}
@@ -109,59 +137,68 @@ def crawl_detail(request, crawl_id):
     return render(request, 'crawl_detail.html', context)
 
 def crawl_links(request, crawl_id):
-    crawl = Crawl.objects.get(id=crawl_id)
-    table = []
-    for c in crawl.crawledlink_set.all():
-        table.append([c.url, c.status_code, floatformat(c.elapsed, 3), c.id, c.elapsed])
-    return HttpResponse(json.dumps({"aaData": table}), content_type="application/json")
+    @cache_response(60*60*10)
+    def internal(_crawl_id):
+        crawl = Crawl.objects.get(id=_crawl_id)
+        table = []
+        for c in crawl.crawledlink_set.all():
+            table.append([c.url, c.status_code, floatformat(c.elapsed, 3), c.id, c.elapsed])
+        return {"aaData": table}
+    return HttpResponse(json.dumps(internal(crawl_id)), content_type="application/json")
 
 def link_detail(request, link_id):
-    context = {}
+    @cache_response(60*60*10)
+    def internal(_link_id):
+        link = CrawledLink.objects.get(id=_link_id)
+        context = {}
+        context["backlinks_info"] = []
+        context["outboundlinks_info"] = []
+
+        all_urls = []
+        outbound_links = BackLink.objects.filter(crawl_id=link.crawl_id, backlink_url_255=link.url_255)
+
+        all_urls.extend(list(set([o.url_255 for o in outbound_links])))
+
+
+        backlinks = link.backlinks()
+        all_urls.extend(list(set([b.backlink_url_255 for b in backlinks])))
+
+        all_urls = list(set(all_urls))
+
+        crawledlink_info = CrawledLink.objects.filter(crawl_id=link.crawl_id, url_255__in=all_urls)
+        crawledlink_info = dict([(c.url, c) for c in crawledlink_info])
+
+        for b in backlinks:
+            info = {
+                "backlink_id": b.id,
+                "backlink_url": b.backlink_url
+            }
+            try:
+                info["backlink_url_status_code"] = crawledlink_info[b.backlink_url].status_code
+                info["backlink_url_crawled_link_id"] = crawledlink_info[b.backlink_url].id
+            except:
+                print_stack_trace()
+                info["backlink_url_status_code"] = -1
+                info["backlink_url_crawled_link_id"] = -1
+            context["backlinks_info"].append(info)
+
+        for o in outbound_links:
+            info = {
+                "outbound_link_id": o.id,
+                "outbound_link_url": o.url
+            }
+            try:
+                info["outbound_url_status_code"] = crawledlink_info[o.url].status_code
+                info["outbound_url_crawled_link_id"] = crawledlink_info[o.url].id
+            except:
+                print_stack_trace()
+                info["outbound_url_status_code"] = -1
+                info["outbound_url_crawled_link_id"] = -1
+            context["outboundlinks_info"].append(info)
+        return context
+
+    context = internal(link_id)
     link = CrawledLink.objects.get(id=link_id)
     context["link"] = link
-    context["backlinks_info"] = []
-    context["outboundlinks_info"] = []
-
-    all_urls = []
-    outbound_links = BackLink.objects.filter(crawl_id=link.crawl_id, backlink_url_255=link.url_255)
-
-    all_urls.extend(list(set([o.url_255 for o in outbound_links])))
-
-
-    backlinks = link.backlinks()
-    all_urls.extend(list(set([b.backlink_url_255 for b in backlinks])))
-
-    all_urls = list(set(all_urls))
-
-    crawledlink_info = CrawledLink.objects.filter(crawl_id=link.crawl_id, url_255__in=all_urls)
-    crawledlink_info = dict([(c.url, c) for c in crawledlink_info])
-
-    for b in backlinks:
-        info = {
-            "backlink_id": b.id,
-            "backlink_url": b.backlink_url
-        }
-        try:
-            info["backlink_url_status_code"] = crawledlink_info[b.backlink_url].status_code
-            info["backlink_url_crawled_link_id"] = crawledlink_info[b.backlink_url].id
-        except:
-            print_stack_trace()
-            info["backlink_url_status_code"] = -1
-            info["backlink_url_crawled_link_id"] = -1
-        context["backlinks_info"].append(info)
-
-    for o in outbound_links:
-        info = {
-            "outbound_link_id": o.id,
-            "outbound_link_url": o.url
-        }
-        try:
-            info["outbound_url_status_code"] = crawledlink_info[o.url].status_code
-            info["outbound_url_crawled_link_id"] = crawledlink_info[o.url].id
-        except:
-            print_stack_trace()
-            info["outbound_url_status_code"] = -1
-            info["outbound_url_crawled_link_id"] = -1
-        context["outboundlinks_info"].append(info)
 
     return render(request, 'link_detail.html', context)

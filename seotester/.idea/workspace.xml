@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73da0f58-dbbc-4aa2-8feb-122d1bde3871" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seotester/urls.py" afterPath="$PROJECT_DIR$/seotester/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seotester/web/views.py" afterPath="$PROJECT_DIR$/seotester/web/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="seotester.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,21 +31,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="prodsettings.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/seotester/prodsettings.py">
+      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/seotester/web/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="55" selection-start="127" selection-end="127" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/seotester/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="812" selection-end="812" vertical-scroll-proportion="0.44520548" vertical-offset="0" max-vertical-offset="876">
+            <state line="180" column="53" selection-start="6489" selection-end="6489" vertical-scroll-proportion="0.55479455" vertical-offset="2214" max-vertical-offset="3150">
               <folding>
-                <element signature="e#0#51#0" expanded="true" />
+                <element signature="e#0#27#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -72,7 +64,6 @@
         <option value="$PROJECT_DIR$/seotester/web/urls.py" />
         <option value="$PROJECT_DIR$/seotester/web/templates/link_detail.html" />
         <option value="$PROJECT_DIR$/seotester/web/static/plugins/datatables/css/demo_table.css" />
-        <option value="$PROJECT_DIR$/seotester/web/views.py" />
         <option value="$PROJECT_DIR$/seotester/web/templates/crawl_detail.html" />
         <option value="$PROJECT_DIR$/seotester/main/management/commands/stats.py" />
         <option value="$PROJECT_DIR$/seotester/main/models.py" />
@@ -84,6 +75,7 @@
         <option value="$PROJECT_DIR$/prodmanage.py" />
         <option value="$PROJECT_DIR$/seotester/prodsettings.py" />
         <option value="$PROJECT_DIR$/seotester/urls.py" />
+        <option value="$PROJECT_DIR$/seotester/web/views.py" />
       </list>
     </option>
   </component>
@@ -150,6 +142,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seotester" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seotester" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seotester" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -158,13 +168,13 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonSdkConfigurable" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../misc" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -266,7 +276,27 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="seotester" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -292,27 +322,7 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="seotester" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -409,7 +419,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1680" height="1024" extended-state="6" />
+    <frame x="0" y="22" width="1680" height="1024" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -417,7 +427,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986537" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31578946" sideWeight="0.67016804" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32007343" sideWeight="0.67016804" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32983193" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -444,27 +454,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/seotester/web/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="21" selection-start="498" selection-end="498" vertical-scroll-proportion="0.11986301" vertical-offset="0" max-vertical-offset="876">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seotester/web/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="86" selection-start="4126" selection-end="4126" vertical-scroll-proportion="0.38356164" vertical-offset="1374" max-vertical-offset="2595">
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/seotester/web/static/arrays.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="9" selection-start="21" selection-end="21" vertical-scroll-proportion="0.034246575" vertical-offset="0" max-vertical-offset="975">
-          <folding />
-        </state>
+        <state line="2" column="9" selection-start="21" selection-end="21" vertical-scroll-proportion="0.034246575" vertical-offset="0" max-vertical-offset="975" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/seotester/bin/out.png">
@@ -481,9 +473,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/seotester/bin/scrape.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="17" selection-start="69" selection-end="74" vertical-scroll-proportion="0.051369864" vertical-offset="0" max-vertical-offset="876">
-          <folding />
-        </state>
+        <state line="3" column="17" selection-start="69" selection-end="74" vertical-scroll-proportion="0.051369864" vertical-offset="0" max-vertical-offset="876" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/seotester/main/management/commands/stats.py">
@@ -493,18 +483,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/seotester/indexes.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="75" selection-start="15" selection-end="149" vertical-scroll-proportion="0.035252646" vertical-offset="0" max-vertical-offset="851">
-          <folding />
-        </state>
+        <state line="2" column="75" selection-start="15" selection-end="149" vertical-scroll-proportion="0.035252646" vertical-offset="0" max-vertical-offset="851" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/seotester/main/management/commands/crawl.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="23" selection-start="3715" selection-end="3715" vertical-scroll-proportion="0.760274" vertical-offset="804" max-vertical-offset="1725">
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="98" column="23" selection-start="3715" selection-end="3715" vertical-scroll-proportion="0.760274" vertical-offset="804" max-vertical-offset="1725" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../env/scripts/lib/python2.7/site-packages/django/http/response.py">
@@ -516,32 +500,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/seotester/web/middleware.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="544" selection-end="544" vertical-scroll-proportion="0.2739726" vertical-offset="0" max-vertical-offset="876">
-          <folding />
-        </state>
+        <state line="16" column="0" selection-start="544" selection-end="544" vertical-scroll-proportion="0.2739726" vertical-offset="0" max-vertical-offset="876" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="0" selection-end="252" vertical-scroll-proportion="0.15410958" vertical-offset="0" max-vertical-offset="876">
-          <folding />
-        </state>
+        <state line="10" column="0" selection-start="0" selection-end="252" vertical-scroll-proportion="0.15410958" vertical-offset="0" max-vertical-offset="876" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/prodmanage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="256" selection-end="256" vertical-scroll-proportion="0.17123288" vertical-offset="0" max-vertical-offset="876">
-          <folding>
-            <element signature="e#22#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seotester/prodsettings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="55" selection-start="127" selection-end="127" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
-          <folding />
-        </state>
+        <state line="10" column="0" selection-start="256" selection-end="256" vertical-scroll-proportion="0.17123288" vertical-offset="0" max-vertical-offset="876" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/seotester/settings.py">
@@ -556,6 +525,29 @@
         <state line="26" column="0" selection-start="812" selection-end="812" vertical-scroll-proportion="0.44520548" vertical-offset="0" max-vertical-offset="876">
           <folding>
             <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seotester/prodsettings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="55" selection-start="127" selection-end="127" vertical-scroll-proportion="0.08561644" vertical-offset="0" max-vertical-offset="876">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../env/scripts/lib/python2.7/site-packages/redis/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="360" column="8" selection-start="11108" selection-end="11108" vertical-scroll-proportion="0.33333334" vertical-offset="4838" max-vertical-offset="34500">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seotester/web/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="180" column="53" selection-start="6489" selection-end="6489" vertical-scroll-proportion="0.55479455" vertical-offset="2214" max-vertical-offset="3150">
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
           </folding>
         </state>
       </provider>
