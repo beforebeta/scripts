@@ -6,7 +6,7 @@ from django.template.defaultfilters import floatformat
 from django.utils.decorators import available_attrs
 from django.views.decorators.csrf import csrf_exempt
 import requests
-from setuptools._backport.hashlib._sha256 import sha224
+import hashlib
 from seotester import print_stack_trace
 from seotester.main.models import Crawl, CrawledLink, BackLink, URL
 
@@ -27,7 +27,7 @@ def cache_response(seconds=0):
         def inner(*args, **kwargs):
             if seconds <= 0:
                 return func(*args, **kwargs)
-            key = sha224(str(func.__module__) + str(func.__name__) + str(args) + str(kwargs)).hexdigest()
+            key = hashlib.sha224(str(func.__module__) + str(func.__name__) + str(args) + str(kwargs)).hexdigest()
 
             response_raw = cache.get(key)
             if response_raw:
