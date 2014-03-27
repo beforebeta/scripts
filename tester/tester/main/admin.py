@@ -51,10 +51,12 @@ class TestCaseAdmin(admin.ModelAdmin):
 
 class TestStepInline(NestedStackedInline):
     model = TestStep
+    extra=0
 
 class TestCaseInline(NestedStackedInline):
     model = TestCase
     inlines = [TestStepInline]
+    extra=0
     #form = TestCaseForm
 
 class TestGroupingAdmin(NestedModelAdmin):

@@ -35,7 +35,7 @@
       <file leaf-file-name="admin.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tester/main/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="52" selection-start="2519" selection-end="2519" vertical-scroll-proportion="-0.04452055" vertical-offset="1089" max-vertical-offset="1965">
+            <state line="101" column="0" selection-start="3350" selection-end="3350" vertical-scroll-proportion="0.4520548" vertical-offset="1119" max-vertical-offset="1995">
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -470,7 +470,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tester/main/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="52" selection-start="2519" selection-end="2519" vertical-scroll-proportion="-0.04452055" vertical-offset="1089" max-vertical-offset="1965">
+        <state line="101" column="0" selection-start="3350" selection-end="3350" vertical-scroll-proportion="0.4520548" vertical-offset="1119" max-vertical-offset="1995">
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
