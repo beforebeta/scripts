@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73da0f58-dbbc-4aa2-8feb-122d1bde3871" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tester/main/admin.py" afterPath="$PROJECT_DIR$/../tester/main/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seotester/web/templates/link_detail.html" afterPath="$PROJECT_DIR$/seotester/web/templates/link_detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tester/main/models.py" afterPath="$PROJECT_DIR$/../tester/main/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seotester/web/views.py" afterPath="$PROJECT_DIR$/seotester/web/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tester/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../tester/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../tester/prodmanage.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tester/main/migrations/0001_initial.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tester/main/migrations/__init__.py" afterPath="" />
     </list>
     <ignored path="seotester.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,12 +41,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="admin.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/seotester/main/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="44" selection-start="815" selection-end="815" vertical-scroll-proportion="0.41095892" vertical-offset="0" max-vertical-offset="876">
+            <state line="24" column="44" selection-start="815" selection-end="815" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="prodmanage.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/prodmanage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="0" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+              <folding>
+                <element signature="e#22#31#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -64,10 +72,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="prodsettings.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="prodsettings.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/seotester/prodsettings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="55" selection-start="127" selection-end="127" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
+            <state line="5" column="53" selection-start="0" selection-end="129" vertical-scroll-proportion="0.08561644" vertical-offset="0" max-vertical-offset="876">
               <folding />
             </state>
           </provider>
@@ -111,8 +119,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-384" />
-    <option name="y" value="-1028" />
+    <option name="x" value="379" />
+    <option name="y" value="-1328" />
     <option name="width" value="1680" />
     <option name="height" value="1024" />
   </component>
@@ -451,8 +459,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-384" y="-1028" width="1680" height="1024" extended-state="0" />
-    <editor active="true" />
+    <frame x="379" y="-1328" width="1680" height="1024" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -511,11 +519,6 @@
         <state line="10" column="0" selection-start="0" selection-end="252" vertical-scroll-proportion="0.15410958" vertical-offset="0" max-vertical-offset="876" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/prodmanage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="256" selection-end="256" vertical-scroll-proportion="0.17123288" vertical-offset="0" max-vertical-offset="876" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/seotester/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="0" selection-start="812" selection-end="812" vertical-scroll-proportion="0.44520548" vertical-offset="0" max-vertical-offset="876" />
@@ -546,13 +549,6 @@
         <state line="151" column="51" selection-start="5363" selection-end="5363" vertical-scroll-proportion="-0.02739726" vertical-offset="2004" max-vertical-offset="2880" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/seotester/prodsettings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="55" selection-start="127" selection-end="127" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/seotester/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="163" column="27" selection-start="5694" selection-end="5694" vertical-scroll-proportion="0.0" vertical-offset="1989" max-vertical-offset="2865">
@@ -569,10 +565,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/seotester/main/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="44" selection-start="815" selection-end="815" vertical-scroll-proportion="0.41095892" vertical-offset="0" max-vertical-offset="876">
+        <state line="24" column="44" selection-start="815" selection-end="815" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prodmanage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+          <folding>
+            <element signature="e#22#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seotester/prodsettings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="53" selection-start="0" selection-end="129" vertical-scroll-proportion="0.08561644" vertical-offset="0" max-vertical-offset="876">
+          <folding />
         </state>
       </provider>
     </entry>
