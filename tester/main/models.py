@@ -119,6 +119,20 @@ class TestCaseRun(models.Model):
         self.comments = self.testcase.comments
         super(TestCaseRun, self).save(*args, **kwargs)
 
+        if self.testgrouping_run:
+            total_cases = self.testgrouping_run.testcaserun_set.all().count()
+            if total_cases > 0:
+                if self.testgrouping_run.testcaserun_set.filter(overall_status="Fail").count() > 0:
+                    self.testgrouping_run.overall_status = "Fail"
+                else:
+                    if self.testgrouping_run.testcaserun_set.filter(overall_status="Pass").count() == total_cases:
+                        self.testgrouping_run.overall_status = "Pass"
+                    else:
+                        self.testgrouping_run.overall_status = "Incomplete"
+            else:
+                self.testgrouping_run.overall_status = "Incomplete"
+            self.testgrouping_run.save()
+
     date_added = models.DateTimeField(default=datetime.datetime.now(), auto_now_add=True)
     last_modified = models.DateTimeField(default=datetime.datetime.now(), auto_now=True, auto_now_add=True)
 
@@ -139,12 +153,26 @@ class TestGroupingRun(models.Model):
     user_agent = models.CharField(max_length=255, null=True, blank=True)
     ip_address = models.CharField(max_length=255, null=True, blank=True)
 
+    overall_status = models.CharField(max_length=50, null=True, blank=True, default="Incomplete")
+
     date_added = models.DateTimeField(default=datetime.datetime.now(), auto_now_add=True)
     last_modified = models.DateTimeField(default=datetime.datetime.now(), auto_now=True, auto_now_add=True)
 
     def save(self, *args, **kwargs):
         self.title = self.testgrouping.title
         super(TestGroupingRun, self).save(*args, **kwargs)
+
+    def total_cases(self):
+        return self.testcaserun_set.all().count()
+
+    def num_incomplete(self):
+        return self.testcaserun_set.filter(overall_status='Incomplete').count()
+
+    def num_pass(self):
+        return self.testcaserun_set.filter(overall_status='Pass').count()
+
+    def num_fail(self):
+        return self.testcaserun_set.filter(overall_status='Fail').count()
 
 #class TestCaseGrouping(models.Model):
 #    sequence = models.IntegerField(default=1)

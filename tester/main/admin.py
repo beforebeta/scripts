@@ -105,18 +105,21 @@ admin.site.register(TestGrouping, TestGroupingAdmin)
 class TestStepRunInline(NestedStackedInline):
     model = TestStepRun
     readonly_fields = ('teststep', 'sequence','description', 'expected_result', 'expected_result_screenshot',)
+    extra=0
 
 class TestCaseRunInline(NestedStackedInline):
     model = TestCaseRun
     inlines = [TestStepRunInline]
     readonly_fields = ('testcase', 'sequence', 'title', 'description', 'preconditions', 'comments', 'overall_status')
+    extra=0
 
 class TestGroupingRunAdmin(NestedModelAdmin):
-    list_display = ['title']
+    list_display = ['title', 'date_added', 'user', 'overall_status', 'total_cases', 'num_incomplete', 'num_pass', 'num_fail']
     inlines = [
         TestCaseRunInline,
     ]
     date_hierarchy = 'last_modified'
     verbose_name = "Text Execution Run"
+    readonly_fields = ('overall_status',)
 
 admin.site.register(TestGroupingRun, TestGroupingRunAdmin)
