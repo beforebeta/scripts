@@ -202,3 +202,4 @@ def link_detail(request, link_id):
     context["link"] = link
 
     return render(request, 'link_detail.html', context)
+
