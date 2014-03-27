@@ -132,7 +132,7 @@ INSTALLED_APPS = (
     'south',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-    #'main',
+    'main',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
