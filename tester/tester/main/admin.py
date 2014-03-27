@@ -114,7 +114,7 @@ class TestCaseRunInline(NestedStackedInline):
     extra=0
 
 class TestGroupingRunAdmin(NestedModelAdmin):
-    list_display = ['title', 'date_added', 'user', 'overall_status', 'total_cases', 'num_incomplete', 'num_pass', 'num_fail']
+    list_display = ['title', 'date_added', 'browser', 'user', 'overall_status', 'total_cases', 'num_incomplete', 'num_pass', 'num_fail']
     inlines = [
         TestCaseRunInline,
     ]
