@@ -49,7 +49,7 @@ class TestCaseAdmin(admin.ModelAdmin):
     #]
     form = TestCaseForm
 
-class TestStepInline(NestedTabularInline):
+class TestStepInline(NestedStackedInline):
     model = TestStep
 
 class TestCaseInline(NestedStackedInline):

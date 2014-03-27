@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73da0f58-dbbc-4aa2-8feb-122d1bde3871" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tester/tester/settings.py" afterPath="$PROJECT_DIR$/../tester/tester/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tester/tester/main/admin.py" afterPath="$PROJECT_DIR$/../tester/tester/main/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="seotester.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,7 +74,7 @@
       <file leaf-file-name="prodsettings.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/seotester/prodsettings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="53" selection-start="0" selection-end="129" vertical-scroll-proportion="0.08561644" vertical-offset="0" max-vertical-offset="876">
+            <state line="5" column="57" selection-start="129" selection-end="129" vertical-scroll-proportion="0.08561644" vertical-offset="0" max-vertical-offset="876">
               <folding />
             </state>
           </provider>
@@ -117,8 +118,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="379" />
-    <option name="y" value="-1328" />
+    <option name="x" value="-384" />
+    <option name="y" value="-113" />
     <option name="width" value="1680" />
     <option name="height" value="1024" />
   </component>
@@ -457,8 +458,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="379" y="-1328" width="1680" height="1024" extended-state="0" />
-    <editor active="false" />
+    <frame x="-384" y="-113" width="1680" height="1024" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -581,7 +582,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/seotester/prodsettings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="53" selection-start="0" selection-end="129" vertical-scroll-proportion="0.08561644" vertical-offset="0" max-vertical-offset="876">
+        <state line="5" column="57" selection-start="129" selection-end="129" vertical-scroll-proportion="0.08561644" vertical-offset="0" max-vertical-offset="876">
           <folding />
         </state>
       </provider>
