@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.forms import ModelForm
 from django.http import HttpResponseRedirect
 from suit_ckeditor.widgets import CKEditorWidget
-from main.models import TestStep, TestCase, Application, TestGrouping, TestCaseRun, TestStepRun, TestGroupingRun
+from tester.main.models import TestStep, TestCase, Application, TestGrouping, TestCaseRun, TestStepRun, TestGroupingRun
 from nested_inlines.admin import NestedModelAdmin, NestedStackedInline, NestedTabularInline
 
 class ApplicationAdmin(admin.ModelAdmin):
